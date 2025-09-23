@@ -43,12 +43,6 @@ class _MyHomePageState extends State<MyHomePage>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
-        ),
         title: const Text('Flutter Bottom Navigation Bar'),),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
