@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage>{
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
-            print("Menu ditekan");
+            Scaffold.of(context).openDrawer();
           },
         ),
         title: const Text('Flutter Bottom Navigation Bar'),),
