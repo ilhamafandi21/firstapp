@@ -42,7 +42,14 @@ class _MyHomePageState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Bottom Navigation Bar'),),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            print("Menu ditekan");
+          },
+        ),
+        title: const Text('Flutter Bottom Navigation Bar'),),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
