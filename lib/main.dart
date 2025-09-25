@@ -28,10 +28,10 @@ class _MyHomePageState extends State<MyHomePage>{
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
-    Center(child: Text("Ini halaman ", style: TextStyle(fontSize: 24))),
+    Center(child: Text("Ini halaman Home", style: TextStyle(fontSize: 24))),
     Center(child: Text("Ini halaman About", style: TextStyle(fontSize: 24))),
     Center(child: Text("Ini halaman Contact", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Ini halaman Product", style: TextStyle(fontSize: 24))),
+    Center(child: Text("Ini  Product", style: TextStyle(fontSize: 24))),
   ];
 
   void _onItemTapped(int index) {
