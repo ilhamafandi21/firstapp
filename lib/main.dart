@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage>{
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.contacts),
-            label: 'Contact',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.audiotrack),
