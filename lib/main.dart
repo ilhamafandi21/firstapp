@@ -69,7 +69,7 @@ class _MainPageState extends State<MainPage>{
 }
 
 class HomePage extends StatelessWidget  {
-  const HomePgae({super.key});
+  const HomePage({super.key});
   @override
   Widget build(BuildContext context){
     return const Center(
