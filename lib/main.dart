@@ -78,12 +78,22 @@ class HomePage extends StateLessWidget {
   }
 }
 
-class HomePage extends StateLessWidget {
-  const HomePgae({super.key});
+class AboutPage extends StateLessWidget {
+  const AboutPage({super.key});
   @override
   Widget build(BuiildContext context){
     return const Center(
-      child: Text('Home Page', style: TextStyle(fontSize: 24),),
+      child: Text('About Page', style: TextStyle(fontSize: 24),),
+    );
+  }
+}
+
+class ContactPage extends StateLessWidget {
+  const ContactPage({super.key});
+  @override
+  Widget build(BuiildContext context){
+    return const Center(
+      child: Text('Contact Page', style: TextStyle(fontSize: 24),),
     );
   }
 }
