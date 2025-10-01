@@ -69,7 +69,17 @@ class _MainPageState extends State<MainPage>{
 }
 
 class HomePage extends StateLessWidget {
-  comst HomePgae({super.key});
+  const HomePgae({super.key});
+  @override
+  Widget build(BuiildContext context){
+    return const Center(
+      child: Text('Home Page', style: TextStyle(fontSize: 24),),
+    );
+  }
+}
+
+class HomePage extends StateLessWidget {
+  const HomePgae({super.key});
   @override
   Widget build(BuiildContext context){
     return const Center(
