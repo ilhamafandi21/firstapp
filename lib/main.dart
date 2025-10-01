@@ -71,7 +71,7 @@ class _MainPageState extends State<MainPage>{
 class HomePage extends StateLessWidget {
   const HomePgae({super.key});
   @override
-  Widget build(BuiildContext context){
+  Widget build(BuildContext context){
     return const Center(
       child: Text('Home Page', style: TextStyle(fontSize: 24),),
     );
@@ -81,7 +81,7 @@ class HomePage extends StateLessWidget {
 class AboutPage extends StateLessWidget {
   const AboutPage({super.key});
   @override
-  Widget build(BuiildContext context){
+  Widget build(BuildContext context){
     return const Center(
       child: Text('About Page', style: TextStyle(fontSize: 24),),
     );
@@ -91,7 +91,7 @@ class AboutPage extends StateLessWidget {
 class ContactPage extends StateLessWidget {
   const ContactPage({super.key});
   @override
-  Widget build(BuiildContext context){
+  Widget build(BuildContext context){
     return const Center(
       child: Text('Contact Page', style: TextStyle(fontSize: 24),),
     );
