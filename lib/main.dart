@@ -68,7 +68,7 @@ class _MainPageState extends State<MainPage>{
   } 
 }
 
-class HomePage extends StateLessWidget {
+class HomePage extends StatelessWidget  {
   const HomePgae({super.key});
   @override
   Widget build(BuildContext context){
@@ -78,7 +78,7 @@ class HomePage extends StateLessWidget {
   }
 }
 
-class AboutPage extends StateLessWidget {
+class AboutPage extends StatelessWidget  {
   const AboutPage({super.key});
   @override
   Widget build(BuildContext context){
@@ -88,7 +88,7 @@ class AboutPage extends StateLessWidget {
   }
 }
 
-class ContactPage extends StateLessWidget {
+class ContactPage extends StatelessWidget  {
   const ContactPage({super.key});
   @override
   Widget build(BuildContext context){
