@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Bottom Navigation Bar'),),
+        title: const Text(' Bottom Navigation Bar'),),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
