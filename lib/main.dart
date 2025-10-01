@@ -13,25 +13,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(),
+      home: const MainPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>{
+class _MainPageState extends State<MainPage>{
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
-    Center(child: Text("Ini halaman Home", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Ini halaman About", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Ini halaman Contact", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Ini halaman Product", style: TextStyle(fontSize: 24))),
+      HomePage(),
+      AboutPage(),
+      ContactPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -63,13 +62,21 @@ class _MyHomePageState extends State<MyHomePage>{
             icon: Icon(Icons.contacts),
             label: 'Contact',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.audiotrack),
-            label: 'Product',
-          ),
         ],
       ),
     );
+  } 
+}
+
+class HomePage extends StateLessWidget {
+  comst HomePgae({super.key});
+  @override
+  Widget build(BuiildContext context){
+    return const Center(
+      child: Text('Home Page', style: TextStyle(fontSize: 24),),
+    );
   }
 }
+
+
 
