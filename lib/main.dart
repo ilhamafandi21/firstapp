@@ -94,7 +94,7 @@ class AboutPage extends StatelessWidget  {
   const AboutPage({super.key});
   @override
   Widget build(BuildContext context){
-    return const SizedBox(
+    return SizedBox(
       height: 250,
 
       child: ListView.builder(
