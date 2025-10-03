@@ -72,8 +72,20 @@ class HomePage extends StatelessWidget  {
   const HomePage({super.key});
   @override
   Widget build(BuildContext context){
-    return const Center(
-      child: Text('Home Page', style: TextStyle(fontSize: 24),),
+    return const Column(
+      mainAxisAlignment: mainAxisAlignment.center,
+      children : [
+        Text("Text atas"),
+        Text("Text dibawahnya"),
+        Row(
+          mainAxixAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icons.star, color: Colors.orange,),
+            SizedBox(width: 10),
+            Text("Text disamping icon"),
+          ]
+        )
+      ];
     );
   }
 }
