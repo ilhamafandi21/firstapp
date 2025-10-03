@@ -94,9 +94,10 @@ class AboutPage extends StatelessWidget  {
   const AboutPage({super.key});
   @override
   Widget build(BuildContext context){
-    return const SingleChildScrollView(
-      scrollDirection : Axis.horizontal,
+    return const Center(
+      
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: const [
           MyCard(title : "Card 1", color: Colors.red),
           MyCard(title : "Card 2", color: Colors.blue),
@@ -112,7 +113,7 @@ class MyCard extends StatelessWidget{
   final String title;
   final Color color;
 
-  const MyCard({super.key required this.title, required this.color});
+  const MyCard({super.key, required this.title, required this.color});
 
   @override
   Widget build(BuildContext contetxt){
