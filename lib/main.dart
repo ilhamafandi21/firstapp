@@ -100,9 +100,9 @@ class AboutPage extends StatelessWidget  {
       child: ListView.builder(
         scrollDirection: Axis.horizontal, // scroll ke samping
         itemCount: 10, // jumlah card
-        itemBuikder : (context, index){
+        itemBuilder : (context, index){
           return MyCard(
-            title: 'Card ${index + 1}',
+            title: "Card ${index + 1}",
             color: Colors.primaries[index % Colors.primaries.length],
           );
         },
