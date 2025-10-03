@@ -94,15 +94,18 @@ class AboutPage extends StatelessWidget  {
   const AboutPage({super.key});
   @override
   Widget build(BuildContext context){
-    return const Center(
-      
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          MyCard(title : "Card 1", color: Colors.red),
-          MyCard(title : "Card 2", color: Colors.blue),
-          MyCard(title : "Card 3", color: Colors.green),
-        ],
+    return const SizedBox(
+      height: 250,
+
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal, // scroll ke samping
+        itemCount: 10, // jumlah card
+        itemBuikder : (context, index){
+          return MyCard(
+            title: 'Card ${index + 1}',
+            color: Colors.primaries[index % Colors.primaries.length],
+          );
+        },
       ),
     );
   }
