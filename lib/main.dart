@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget  {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icons.star, color: Colors.orange,),
+            Icon(Icons.star, color: Colors.orange,),
             SizedBox(width: 10),
             Text("Text disamping icon"),
           ],
