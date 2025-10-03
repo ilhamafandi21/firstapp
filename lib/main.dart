@@ -83,9 +83,9 @@ class HomePage extends StatelessWidget  {
             Icon(icons.star, color: Colors.orange,),
             SizedBox(width: 10),
             Text("Text disamping icon"),
-          ]
-        )
-      ];
+          ],
+        ),
+      ],
     );
   }
 }
