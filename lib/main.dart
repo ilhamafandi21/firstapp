@@ -94,11 +94,56 @@ class AboutPage extends StatelessWidget  {
   const AboutPage({super.key});
   @override
   Widget build(BuildContext context){
-    return const Center(
-      child: Text('About Page', style: TextStyle(fontSize: 24),),
+    return const SingleChildScrollView(
+      scrollDirection : Axis.horizontal,
+      child: Row(
+        children: const [
+          MyCard(title : "Card 1", color: Colors.red),
+          MyCard(title : "Card 2", color: Colors.blue),
+          MyCard(title : "Card 3", color: Colors.green),
+        ],
+      ),
     );
   }
 }
+
+class MyCard extends StatelessWidget{
+
+  final String title;
+  final Color color;
+
+  const MyCard({super.key required this.title, required this.color});
+
+  @override
+  Widget build(BuildContext contetxt){
+    return Container(
+      width: 150,
+      height: 200,
+      margin: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 4,
+              offset: Offset(2, 4),
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+    }
+  }
 
 class ContactPage extends StatelessWidget  {
   const ContactPage({super.key});
