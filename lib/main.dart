@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget  {
       mainAxisAlignment: MainAxisAlignment.center,
       children : [
         Text("Text atas"),
-        Text("Text "),
+        Text("Text dibawahnya"),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
