@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget  {
           children: [
             Icon(Icons.star, color: Colors.black,),
             SizedBox(width: 10),
-            Text("Text disamping "),
+            Text("Text disamping icon"),
           ],
         ),
       ],
