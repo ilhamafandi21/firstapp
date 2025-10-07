@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget  {
             ),
             child: const Center(
               child: Text(
-                "12:45\ntersisa",
+                "12:45\",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
               ),
