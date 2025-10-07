@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget  {
   Widget build(BuildContext context){
    return Scaffold(
     appBar: AppBar(
-      title: const Text('Intermittent App'),
+      title: const Text(' App'),
       centerTitle: true,
     ),
     body: Padding(
