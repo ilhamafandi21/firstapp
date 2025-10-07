@@ -27,7 +27,7 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<>{
+class _MainPageState extends State<MainPage>{
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
