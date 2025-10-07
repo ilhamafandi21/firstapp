@@ -36,7 +36,7 @@ class _MainPageState extends State<MainPage>{
       SettingsPage(),
   ];
 
-  void _onItemTapped(int ) {
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
