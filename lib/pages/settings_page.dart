@@ -33,7 +33,7 @@ class SettingsPage extends StatelessWidget {
             SwitchListTile(
               value: true,
               onChanged: (val) {},
-              title: const Text("Aktifkan  waktu buka"),
+              title: const Text("Aktifkan pengingat waktu buka"),
             ),
           ],
         ),
