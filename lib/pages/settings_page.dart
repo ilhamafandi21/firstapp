@@ -7,7 +7,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(""),
+        title: const Text("Pengaturan"),
         centerTitle: true,
       ),
       body: Padding(
