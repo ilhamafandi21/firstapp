@@ -32,7 +32,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: const Text("First ", style: TextStyle(color: Colors.blue))),
+      appBar: AppBar(title: const Text("First App", style: TextStyle(color: Colors.blue))),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
