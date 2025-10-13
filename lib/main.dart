@@ -25,8 +25,15 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor : Color.fromARGB(255, 193, 255, 7),
-        title: const Text("Fasting App", style: TextStyle( color: Colors.brown),),
+        backgroundColor: Color.fromARGB(255, 193, 255, 7),
+        title: const Text(
+          "Fasting App",
+          style: TextStyle(
+            color: Colors.brown,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
