@@ -39,10 +39,12 @@ class Home extends StatelessWidget {
           Icon(Icons.settings),
         ],
       ),
-      body: 
-      
-      
-      Column(children: <Widget>[Text('Fasting App')]),
+      body: Container(child: Column(children: <Widget>[
+        Text('Fasting App'),
+        Text('Fasting App jasjkh djkcdcj osdojnb ajobjoab osd '),
+        Text('Fasting App'),
+      ])),
+
       // body: Container(
       //   color: Colors.black,
       //   margin: EdgeInsets.all(10),
