@@ -34,6 +34,10 @@ class Home extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          Icon(Icons.menu),
+        ],
+      
       ),
     );
   }
