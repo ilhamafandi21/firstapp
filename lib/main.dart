@@ -46,7 +46,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Fasting App'),
-            Text('Fasting App jasjkh djkcdcj osdojnb ajobjoab osd '),
+            Text('Fasting App jasjkh djkcdcj osdojnb ajobjoab osd', style: TextStyle(fontSize: 24),),
             Text('Fasting App'),
           ],
         ),
