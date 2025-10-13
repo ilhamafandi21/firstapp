@@ -42,6 +42,7 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 211, 255, 149),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
