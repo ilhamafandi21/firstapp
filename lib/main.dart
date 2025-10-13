@@ -40,6 +40,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Container(
+        height: 500.0,
         color: const Color.fromARGB(255, 211, 255, 149),
         child: Column(
           mainAxisSize: MainAxisSize.min,
