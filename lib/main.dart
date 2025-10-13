@@ -43,10 +43,10 @@ class Home extends StatelessWidget {
         color: const Color.fromARGB(255, 211, 255, 149),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text('Fasting App'),
-            Text('Fasting App jasjkh djkcdcj osdojnb ajobjoab osd', style: TextStyle(fontSize: 24),),
+            Text('Fasting App jasjkh sdjs ', style: TextStyle(fontSize: 24),),
             Text('Fasting App'),
           ],
         ),
