@@ -40,7 +40,10 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Container(
+        color: const Color.fromARGB(255, 211, 255, 149),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Fasting App'),
             Text('Fasting App jasjkh djkcdcj osdojnb ajobjoab osd '),
