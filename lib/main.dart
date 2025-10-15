@@ -40,12 +40,14 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Container(
-        child: Column(
+        alignment: AlignmentGeometry.center,
+        color: Colors.white38,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.contact_phone, size: 50),
-            Icon(Icons.navigate_next, size: 50),
-            Icon(Icons.share_sharp, size: 50),
-
+            Icon(Icons.phone, size: 50, color: Colors.blue,),
+            Icon(Icons.navigation, size: 50, color: Colors.blue),
+            Icon(Icons.share_sharp, size: 50, color: Colors.blue),
           ],
         ),
       ),
