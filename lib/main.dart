@@ -42,11 +42,11 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 98, 255, 0),
         child: Row(
-          // mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.healing, size: 50),
             Icon(Icons.health_and_safety, size: 50),
+            Icon(Icons.food_bank, size: 50),
+            Icon(Icons.tips_and_updates, size: 50),
+            Icon(Icons.timelapse, size: 50),
           ],
         ),
       ),
