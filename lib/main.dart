@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 98, 255, 0),
         child: Row(
-          mainAxisSize: MainAxisSize.min,
+          // mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.healing, size: 50),
