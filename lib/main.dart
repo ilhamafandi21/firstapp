@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
       body: Center(
         child: Container(
           alignment: AlignmentGeometry.center,
-          color: const Color.fromARGB(97, 220, 241, 132),
+          color: Colors.grey[200],
           width: double.infinity,
           height: 80.0,
           child: Row(
@@ -51,33 +51,33 @@ class Home extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.call, color: Colors.blue),
-                  SizedBox(height: 8,),
+                  Icon(Icons.call, size: 30.0, color: Colors.blue),
+                  SizedBox(height: 8),
                   Text(
                     'Call',
-                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                    style: TextStyle(fontSize: 12, color: Colors.blue),
                   ),
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.navigation, color: Colors.blue),
-                  SizedBox(height: 8,),
+                  Icon(Icons.navigation, size: 30.0, color: Colors.blue),
+                  SizedBox(height: 8),
                   Text(
                     'Route',
-                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                    style: TextStyle(fontSize: 12, color: Colors.blue),
                   ),
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.share, color: Colors.blue),
-                  SizedBox(height: 8,),
+                  Icon(Icons.share, size: 30.0, color: Colors.blue),
+                  SizedBox(height: 8),
                   Text(
                     'Share',
-                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                    style: TextStyle(fontSize: 12, color: Colors.blue),
                   ),
                 ],
               ),
