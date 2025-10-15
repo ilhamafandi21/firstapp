@@ -42,6 +42,7 @@ class Home extends StatelessWidget {
       body: Container(
         color: const Color.fromARGB(255, 98, 255, 0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.health_and_safety, size: 50),
             Icon(Icons.food_bank, size: 50),
