@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             Text('Fasting App'),
             Text('"Neque porro quisquam lit...', style: TextStyle(fontSize: 24),),
-            Text('But I must explain to you how'),
+            Text('But I must '),
           ],
         ),
       ),
