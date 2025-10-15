@@ -40,19 +40,30 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Container(
-        height: 500.0,
-        color: const Color.fromARGB(255, 211, 255, 149),
-        child: Column(
+        color: const Color.fromARGB(255, 98, 255, 0),
+        child: Row(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text('Fasting App'),
-            Text('"Neque porro quisquam lit...', style: TextStyle(fontSize: 24),),
-            Text('But I must '),
+          children: [
+            Icon(Icons.healing, size: 50),
+            Icon(Icons.health_and_safety, size: 50),
           ],
         ),
       ),
+
+      // body: Container(
+      //   height: 500.0,
+      //   color: const Color.fromARGB(255, 211, 255, 149),
+      //   child: Column(
+      //     mainAxisSize: MainAxisSize.min,
+      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //     crossAxisAlignment: CrossAxisAlignment.stretch,
+      //     children: <Widget>[
+      //       Text('Fasting App'),
+      //       Text('"Neque porro quisquam lit...', style: TextStyle(fontSize: 24),),
+      //       Text('But I must '),
+      //     ],
+      //   ),
+      // ),
 
       // body: Container(
       //   color: Colors.black,
