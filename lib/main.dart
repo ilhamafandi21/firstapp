@@ -39,17 +39,20 @@ class Home extends StatelessWidget {
           Icon(Icons.settings),
         ],
       ),
-      body: Container(
-        alignment: AlignmentGeometry.center,
-        color: Colors.white38,
-        width: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Icon(Icons.phone, size: 50, color: Colors.blue,),
-            Icon(Icons.navigation, size: 50, color: Colors.blue),
-            Icon(Icons.share_sharp, size: 50, color: Colors.blue),
-          ],
+      body: Center(
+        child: Container(
+          alignment: AlignmentGeometry.center,
+          color: const Color.fromARGB(97, 220, 241, 132),
+          width: double.infinity,
+          height: 80.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(Icons.phone, size: 50, color: Colors.blue,),
+              Icon(Icons.navigation, size: 50, color: Colors.blue),
+              Icon(Icons.share_sharp, size: 50, color: Colors.blue),
+            ],
+          ),
         ),
       ),
 
