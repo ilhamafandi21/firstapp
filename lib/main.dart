@@ -48,9 +48,27 @@ class Home extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.phone, size: 50, color: Colors.blue,),
-              Icon(Icons.navigation, size: 50, color: Colors.blue),
-              Icon(Icons.share_sharp, size: 50, color: Colors.blue),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.call, color: Colors.blue),
+                  Text('Call', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.navigation, color: Colors.blue),
+                  Text('Route', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.share, color: Colors.blue),
+                  Text('Share', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                ],
+              ),
             ],
           ),
         ),
