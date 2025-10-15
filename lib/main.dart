@@ -42,6 +42,7 @@ class Home extends StatelessWidget {
       body: Container(
         alignment: AlignmentGeometry.center,
         color: Colors.white38,
+        width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
