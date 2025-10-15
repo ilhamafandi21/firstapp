@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text('Fasting App'),
-            Text('Fasting App jasjkh  ', style: TextStyle(fontSize: 24),),
+            Text('"Neque porro quisquam lit...', style: TextStyle(fontSize: 24),),
             Text('Fasting App'),
           ],
         ),
