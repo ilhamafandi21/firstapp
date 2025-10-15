@@ -40,17 +40,28 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Container(
-        color: const Color.fromARGB(255, 98, 255, 0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Column(
           children: [
-            Icon(Icons.health_and_safety, size: 50),
-            Icon(Icons.food_bank, size: 50),
-            Icon(Icons.tips_and_updates, size: 50),
-            Icon(Icons.timelapse, size: 50),
+            Icon(Icons.contact_phone, size: 50),
+            Icon(Icons.navigate_next, size: 50),
+            Icon(Icons.share_sharp, size: 50),
+
           ],
         ),
       ),
+
+      // body: Container(
+      //   color: const Color.fromARGB(255, 98, 255, 0),
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [
+      //       Icon(Icons.health_and_safety, size: 50),
+      //       Icon(Icons.food_bank, size: 50),
+      //       Icon(Icons.tips_and_updates, size: 50),
+      //       Icon(Icons.timelapse, size: 50),
+      //     ],
+      //   ),
+      // ),
 
       // body: Container(
       //   height: 500.0,
