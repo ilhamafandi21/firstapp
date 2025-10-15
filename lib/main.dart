@@ -52,21 +52,33 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.call, color: Colors.blue),
-                  Text('Call', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                  SizedBox(height: 8,),
+                  Text(
+                    'Call',
+                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                  ),
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.navigation, color: Colors.blue),
-                  Text('Route', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                  SizedBox(height: 8,),
+                  Text(
+                    'Route',
+                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                  ),
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.share, color: Colors.blue),
-                  Text('Share', style: TextStyle(fontSize: 20, color: Colors.blue),),
+                  SizedBox(height: 8,),
+                  Text(
+                    'Share',
+                    style: TextStyle(fontSize: 20, color: Colors.blue),
+                  ),
                 ],
               ),
             ],
