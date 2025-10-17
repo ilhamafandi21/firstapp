@@ -1,3 +1,4 @@
+import 'package:firstapp/presentation/home/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,88 +19,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 193, 255, 7),
-        title: const Text(
-          "Fasting App",
-          style: TextStyle(
-            color: Colors.brown,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          Icon(Icons.account_circle, color: Colors.brown),
-          Icon(Icons.settings),
-        ],
-      ),
-      body: Center(
-        child: Container(
-          alignment: AlignmentGeometry.center,
-          color: Colors.grey[200],
-          width: double.infinity,
-          height: 80.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconWithLabel(
-                icon: Icons.call,
-                text: 'Call',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-              IconWithLabel(
-                icon: Icons.navigation,
-                text: 'Route',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-              IconWithLabel(
-                icon: Icons.share,
-                text: 'Share',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
-class IconWithLabel extends StatelessWidget {
-  const IconWithLabel({
-    super.key,
-    @required this.icon,
-    @required this.text,
-    @required this.textColor,
-    @required this.iconColor,
-  });
 
-  final IconData? icon;
-  final String? text;
-  final Color? textColor;
-  final Color? iconColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon ?? Icons.error, size: 30.0, color: iconColor ?? Colors.black),
-        SizedBox(height: 8),
-        Text(
-          text!,
-          style: TextStyle(fontSize: 12, color: textColor ?? Colors.black),
-        ),
-      ],
-    );
-  }
-}
