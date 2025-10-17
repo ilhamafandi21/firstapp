@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({super.key, @required this.title, this.buttonText});
+  const Dashboard({super.key, @required this.title, @required this.buttonText});
+  
   final String? title;
-  final String? buttonText = 'Back To Home';
+  final String? buttonText;
 
   @override
   Widget build(BuildContext context) {

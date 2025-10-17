@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
                 String title = 'Dashboard';
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => Dashboard(title: title),
+                    builder: (context) => Dashboard(buttonText: 'back to Home', title: title,),
                   ),
                 );
               },
