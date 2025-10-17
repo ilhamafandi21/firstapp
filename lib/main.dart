@@ -50,79 +50,17 @@ class Home extends StatelessWidget {
             children: [
               IconWithLabel(icon: Icons.call, text: 'Call'),
               IconWithLabel(icon: Icons.navigation, text: 'Route'),
-              IconWithLabel(icon: Icons.share, text: 'Share'),
+              IconWithLabel(),
             ],
           ),
         ),
       ),
-
-      // body: Container(
-      //   color: const Color.fromARGB(255, 98, 255, 0),
-      //   child: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //     children: [
-      //       Icon(Icons.health_and_safety, size: 50),
-      //       Icon(Icons.food_bank, size: 50),
-      //       Icon(Icons.tips_and_updates, size: 50),
-      //       Icon(Icons.timelapse, size: 50),
-      //     ],
-      //   ),
-      // ),
-
-      // body: Container(
-      //   height: 500.0,
-      //   color: const Color.fromARGB(255, 211, 255, 149),
-      //   child: Column(
-      //     mainAxisSize: MainAxisSize.min,
-      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //     crossAxisAlignment: CrossAxisAlignment.stretch,
-      //     children: <Widget>[
-      //       Text('Fasting App'),
-      //       Text('"Neque porro quisquam lit...', style: TextStyle(fontSize: 24),),
-      //       Text('But I must '),
-      //     ],
-      //   ),
-      // ),
-
-      //  Column(
-      //                 mainAxisAlignment: MainAxisAlignment.center,
-      //                 children: [
-      //                   Icon(Icons.navigation, size: 30.0, color: Colors.blue),
-      //                   SizedBox(height: 8),
-      //                   Text(
-      //                     'Route',
-      //                     style: TextStyle(fontSize: 12, color: Colors.blue),
-      //                   ),
-      //                 ],
-      //               ),
-      //               Column(
-      //                 mainAxisAlignment: MainAxisAlignment.center,
-      //                 children: [
-      //                   Icon(Icons.share, size: 30.0, color: Colors.blue),
-      //                   SizedBox(height: 8),
-      //                   Text(
-      //                     'Share',
-      //                     style: TextStyle(fontSize: 12, color: Colors.blue),
-      //                   ),
-      //                 ],
-      //               ),
-
-      // body: Container(
-      //   color: Colors.black,
-      //   margin: EdgeInsets.all(10),
-      //   padding: EdgeInsets.all(10),
-      //   child: Icon(
-      //     Icons.health_and_safety_rounded,
-      //     size: 100.0,
-      //     color: const Color.fromARGB(255, 0, 201, 50),
-      //   ),
-      // ),
     );
   }
 }
 
 class IconWithLabel extends StatelessWidget {
-  const IconWithLabel({super.key, this.icon, this.text});
+  const IconWithLabel({super.key, @required this.icon, @required this.text});
 
   final IconData? icon;
   final String? text;
