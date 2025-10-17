@@ -132,9 +132,9 @@ class IconWithLabel extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, size: 30.0, color: Colors.blue),
+        Icon(icon ?? Icons.error, size: 30.0, color: Colors.blue),
         SizedBox(height: 8),
-        Text(text, style: TextStyle(fontSize: 12, color: Colors.blue)),
+        Text(text!, style: TextStyle(fontSize: 12, color: Colors.blue)),
       ],
     );
   }
