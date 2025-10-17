@@ -1,3 +1,4 @@
+import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
 import 'package:flutter/material.dart';
 
@@ -22,36 +23,51 @@ class Home extends StatelessWidget {
           Icon(Icons.settings),
         ],
       ),
-      body: Center(
-        child: Container(
-          alignment: AlignmentGeometry.center,
-          color: Colors.grey[200],
-          width: double.infinity,
-          height: 80.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconWithLabel(
-                icon: Icons.call,
-                text: 'Call',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-              IconWithLabel(
-                icon: Icons.navigation,
-                text: 'Route',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-              IconWithLabel(
-                icon: Icons.share,
-                text: 'Share',
-                textColor: Colors.blue,
-                iconColor: Colors.green,
-              ),
-            ],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                String title = 'ini berasal dari home';
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => Dashboard(title: title)));
+              },
+              child: Text('Go to Dashboard'),
+            ),
           ),
-        ),
+          Container(
+            alignment: AlignmentGeometry.center,
+            color: Colors.grey[200],
+            width: double.infinity,
+            height: 80.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconWithLabel(
+                  icon: Icons.call,
+                  text: 'Call',
+                  textColor: Colors.blue,
+                  iconColor: Colors.green,
+                ),
+                IconWithLabel(
+                  icon: Icons.navigation,
+                  text: 'Route',
+                  textColor: Colors.blue,
+                  iconColor: Colors.green,
+                ),
+                IconWithLabel(
+                  icon: Icons.share,
+                  text: 'Share',
+                  textColor: Colors.blue,
+                  iconColor: Colors.green,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
