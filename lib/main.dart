@@ -48,39 +48,8 @@ class Home extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.call, size: 30.0, color: Colors.blue),
-                  SizedBox(height: 8),
-                  Text(
-                    'Call',
-                    style: TextStyle(fontSize: 12, color: Colors.blue),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.navigation, size: 30.0, color: Colors.blue),
-                  SizedBox(height: 8),
-                  Text(
-                    'Route',
-                    style: TextStyle(fontSize: 12, color: Colors.blue),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.share, size: 30.0, color: Colors.blue),
-                  SizedBox(height: 8),
-                  Text(
-                    'Share',
-                    style: TextStyle(fontSize: 12, color: Colors.blue),
-                  ),
-                ],
-              ),
+              IconWithLabel(),
+             
             ],
           ),
         ),
@@ -114,6 +83,30 @@ class Home extends StatelessWidget {
       //   ),
       // ),
 
+//  Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Icon(Icons.navigation, size: 30.0, color: Colors.blue),
+//                   SizedBox(height: 8),
+//                   Text(
+//                     'Route',
+//                     style: TextStyle(fontSize: 12, color: Colors.blue),
+//                   ),
+//                 ],
+//               ),
+//               Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Icon(Icons.share, size: 30.0, color: Colors.blue),
+//                   SizedBox(height: 8),
+//                   Text(
+//                     'Share',
+//                     style: TextStyle(fontSize: 12, color: Colors.blue),
+//                   ),
+//                 ],
+//               ),
+
+
       // body: Container(
       //   color: Colors.black,
       //   margin: EdgeInsets.all(10),
@@ -124,6 +117,27 @@ class Home extends StatelessWidget {
       //     color: const Color.fromARGB(255, 0, 201, 50),
       //   ),
       // ),
+    );
+  }
+}
+
+class IconWithLabel extends StatelessWidget {
+  const IconWithLabel({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(Icons.call, size: 30.0, color: Colors.blue),
+        SizedBox(height: 8),
+        Text(
+          'Call',
+          style: TextStyle(fontSize: 12, color: Colors.blue),
+        ),
+      ],
     );
   }
 }
