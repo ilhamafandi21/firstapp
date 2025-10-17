@@ -47,7 +47,11 @@ class Home extends StatelessWidget {
           height: 80.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [IconWithLabel(), IconWithLabel(), IconWithLabel()],
+            children: [
+              IconWithLabel(icon: Icons.call, text: 'Call'),
+              IconWithLabel(icon: Icons.navigation, text: 'Route'),
+              IconWithLabel(icon: Icons.share, text: 'Share'),
+            ],
           ),
         ),
       ),
