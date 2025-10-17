@@ -14,7 +14,7 @@ class Dashboard extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).pop();
         },
-        child: Text(buttonText ?? 'No Title'),
+        child: Text(buttonText ?? 'Button'),
       ),
     );
   }
