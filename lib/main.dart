@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
             children: [
               IconWithLabel(icon: Icons.call, text: 'Call'),
               IconWithLabel(icon: Icons.navigation, text: 'Route'),
-              IconWithLabel(),
+              IconWithLabel(icon: Icons.share, text: 'Share'),
             ],
           ),
         ),
