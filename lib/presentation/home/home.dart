@@ -30,10 +30,12 @@ class Home extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
-                String title = 'ini berasal dari home';
-                Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (context) => Dashboard(title: title)));
+                String title = 'Dashboard';
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => Dashboard(title: title),
+                  ),
+                );
               },
               child: Text('Go to Dashboard'),
             ),
