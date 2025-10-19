@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Go to Dashboard'),
+              child: Text('Go to '),
             ),
           ),
           Container(
