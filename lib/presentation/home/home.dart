@@ -32,12 +32,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 String title = 'Dashboard';
                 String buttonText = 'Back to Home';
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        Dashboard(buttonText: buttonText, title: title),
-                  ),
-                );
+               
               },
               child: Text('Go to Dashboard'),
             ),

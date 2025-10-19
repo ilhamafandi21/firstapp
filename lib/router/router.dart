@@ -1,26 +1,24 @@
 import 'package:auto_route/auto_route.dart';
 
-@AutoRouterConfig()
+@AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class AppRouter extends RootStackRouter {
 
   @override
+  RouteType get defaultRouteType => RouteType.material(); //.cupertino, .adaptive ..etc
+
+  @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: HomeScreen, initial: true),
-        AutoRoute(page: DashboardScreen),
+    // HomeScreen is generated as HomeRoute because
+    // of the replaceInRouteName property
+    AutoRoute(page: HomeRoute.page),
+  ];
+
+  @override
+  List<AutoRouteGuard> get guards => [
+    // optionally add root guards here
   ];
 }
 
 @RoutePage()
-class HomeScreen extends StatefulWidget {}
+class HomeRoute extends StatefulWidget {}
 
-@RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('Home')),
-    );
-  }
-}
