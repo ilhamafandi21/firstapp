@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
-                String title = 'Dashboard';
+                String title = '';
                 String buttonText = 'Back';
                 Navigator.of(context).push(
                   MaterialPageRoute(
