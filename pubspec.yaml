@@ -3,8 +3,6 @@ description: "A new Flutter project."
 publish_to: 'none'
 version: 1.0.0+1
 
-
-
 environment:
   sdk: ^3.9.2
 
@@ -20,7 +18,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   auto_route_generator: ^10.2.5
   build_runner: ^2.10.0
-  lean_builder: ^0.3.2
+  lean_builder: ^0.1.2
 
 flutter:
   uses-material-design: true
