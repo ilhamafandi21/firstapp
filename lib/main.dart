@@ -4,7 +4,6 @@ import 'router/router.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final _appRouter = AppRouter();

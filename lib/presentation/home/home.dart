@@ -1,7 +1,10 @@
-import 'package:firstapp/presentation/dashboard/dashboard.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:firstapp/router/router.gr.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
 import 'package:flutter/material.dart';
 
+
+@RoutePage()
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -32,7 +35,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 String title = 'Dashboard';
                 String buttonText = 'Back to Home';
-               
+                context.router.push(Dashboard(title: title, buttonText: buttonText));
               },
               child: Text('Go to Dashboard'),
             ),

@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key, @required this.title, @required this.buttonText});
   
@@ -12,7 +14,7 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(title: Text(title ?? 'Dashboard')),
       body: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).pop();
+          context.router.pop();
         },
         child: Text(buttonText ?? 'Button'),
       ),
