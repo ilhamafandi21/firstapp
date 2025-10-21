@@ -316,7 +316,7 @@ packages:
     source: hosted
     version: "3.0.2"
   lean_builder:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: lean_builder
       sha256: ef5cd5f907157eb7aa87d1704504b5a6386d2cbff88a3c2b3344477bab323ee9

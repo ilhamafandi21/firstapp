@@ -14,7 +14,8 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(title: Text(title ?? 'Dashboard')),
       body: ElevatedButton(
         onPressed: () {
-          context.router.pop();
+          // context.router.pop();
+          Navigator.of(context).pop();
         },
         child: Text(buttonText ?? 'Button'),
       ),
