@@ -1,4 +1,4 @@
-import 'package:auto_route/auto_route.dart';
+// import 'package:auto_route/auto_route.dart';
 import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
