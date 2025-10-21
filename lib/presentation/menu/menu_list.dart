@@ -14,11 +14,11 @@ class _MenuListState extends State<MenuList> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(child: ListView(
-        scrollDirection: Axis.,
+        scrollDirection: Axis.horizontal,
         children: [
           Text('List 1'),
-           Text('List 1'),
-            Text('List 1'),
+           Text('List 2'),
+            Text('List 3'),
              Text('List 1'),
               Text('List 1'),
                Text('List 1'),
