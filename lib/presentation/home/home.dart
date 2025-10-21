@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 String title = 'Dashboard';
                 String buttonText = 'Back to Home';
-                context.router.push(Dashboard());
+                context.router.push(Dashboard(title: title, buttonText: buttonText));
               },
               child: Text('Go to Dashboard'),
             ),
