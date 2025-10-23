@@ -10,6 +10,13 @@ class MenuList extends StatefulWidget {
 }
 
 class _MenuListState extends State<MenuList> {
+  List<String> gambarMenu = [
+    'assets/images/food1.webp',
+    'assets/images/food2.webp',
+    'assets/images/food3.jpg',
+    'assets/images/food4.jpg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +25,13 @@ class _MenuListState extends State<MenuList> {
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: 5,
+            itemCount: gambarMenu.length,
             itemBuilder: (context, index) => Container(
-              
               alignment: Alignment.topRight,
               height: 100,
               width: 100,
               margin: EdgeInsets.all(8.0),
-              child: Image.asset('assets/images/food1.webp', fit: BoxFit.contain),
+              child: Image.asset(gambarMenu[index]),
             ),
           ),
           // child: ListView(
