@@ -24,6 +24,7 @@ class _ProfileState extends State<Profile> {
                   color: const Color.fromARGB(255, 0, 0, 0),
                   blurRadius: 5.0,
                   offset: Offset.fromDirection(90),
+                  spreadRadius: 1,
                 ),
               ],
             ),
