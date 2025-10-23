@@ -12,7 +12,8 @@ class ItemDetailPage extends StatelessWidget {
         child: Container(
           height: 300,
           width: double.infinity,
-          child: Image.asset(gambar ?? 'Gambar tidak tersedia', fit: BoxFit.cover)),
+          margin: EdgeInsets.all(10.0),
+          child: Image.asset(gambar ?? 'Gambar tidak tersedia', fit: BoxFit.cover,)),
       ),
     );
   }
