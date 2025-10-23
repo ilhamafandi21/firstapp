@@ -36,7 +36,7 @@ class _MenuListState extends State<MenuList> {
             itemBuilder: (context, index) => InkWell(
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ItemDetailPage(gambarMenu: 'Halo',)),
+                  MaterialPageRoute(builder: (context) => ItemDetailPage(gambar: gambarMenu[index],)),
                 );
               },
               child: ListImage(gambarMenu: gambarMenu[index]),
