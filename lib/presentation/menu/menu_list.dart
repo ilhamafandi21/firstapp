@@ -1,4 +1,6 @@
 // import 'package:auto_route/auto_route.dart';
+import 'package:firstapp/presentation/item_detail/item_detail_page.dart';
+import 'package:firstapp/widgets/menu_list.dart';
 import 'package:flutter/material.dart';
 
 // @RoutePage()
@@ -23,15 +25,21 @@ class _MenuListState extends State<MenuList> {
       body: SafeArea(
         child: Container(
           child: GridView.builder(
+            itemCount: gambarMenu.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              childAspectRatio: 2/1,
+              crossAxisCount: 4,
+              childAspectRatio: 1 / 1,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
+              mainAxisExtent: 100,
             ),
-            itemBuilder: (context, index) => Container(
-             
-              child: Image.asset(gambarMenu[index], fit: BoxFit.cover),
+            itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => ItemDetailPage(gambarMenu: 'Halo',)),
+                );
+              },
+              child: ListImage(gambarMenu: gambarMenu[index]),
             ),
           ),
 
