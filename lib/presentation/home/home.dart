@@ -1,6 +1,7 @@
 // import 'package:auto_route/auto_route.dart';
 import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
+import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,18 @@ class Home extends StatelessWidget {
                 ).push(MaterialPageRoute(builder: (context) => MenuList()));
               },
               child: Text('Go to Menu List'),
+            ),
+          ),
+
+          Container(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => Profile()));
+              },
+              child: Text('Go to Profile Page'),
             ),
           ),
 

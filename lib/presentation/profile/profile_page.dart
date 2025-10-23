@@ -11,9 +11,66 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Container(
-        child: Text('Profile Page'),
-      )),
+      body: SafeArea(
+        child: Container(
+          child: Container(
+            height: 250,
+            color: Colors.red,
+            child: Card(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Image.asset(
+                        'assets/images/food1.webp',
+                        width: 100,
+                        height: 100,
+                      ),
+          
+                      Column(
+                        children: [
+                          Column(children: [Text('Username'), Text('Job Title')]),
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Column(
+                                    children: [Text('Articles'), Text('34')],
+                                  ),
+          
+                                  Column(
+                                    children: [Text('followers'), Text('1120')],
+                                  ),
+                                  Column(children: [Text('Rate'), Text('9.3')]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+          
+                  Row(
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('Chat')),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Follow'),
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(
+                            Colors.lightBlue,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
