@@ -22,19 +22,32 @@ class _MenuListState extends State<MenuList> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: ListView.builder(
-            shrinkWrap: true,
-            scrollDirection: Axis.vertical,
-            itemCount: gambarMenu.length,
+          child: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 2/1,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+            ),
             itemBuilder: (context, index) => Container(
-              // alignment: Alignment.topRight,
-              height: 100,
-              width: 100,
-              margin: EdgeInsets.all(8.0),
-
-              child: Image.asset(gambarMenu[index], fit: BoxFit.cover, ),
+             
+              child: Image.asset(gambarMenu[index], fit: BoxFit.cover),
             ),
           ),
+
+          // child: ListView.builder(
+          //   scrollDirection: Axis.vertical,
+          //   itemCount: gambarMenu.length,
+          //   itemBuilder: (context, index) => Container(
+          //     // alignment: Alignment.topRight,
+          //     height: 100,
+          //     width: 100,
+          //     margin: EdgeInsets.all(8.0),
+
+          //     child: Image.asset(gambarMenu[index], fit: BoxFit.cover, ),
+          //   ),
+          // ),
+
           // child: ListView(
           //   scrollDirection: Axis.vertical,
           //   children: [
