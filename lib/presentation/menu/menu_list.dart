@@ -15,20 +15,27 @@ class _MenuListState extends State<MenuList> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Text('Food 1'),
-              Container(
-                height: 100,
-                width: 100,
-                child: Image.asset(
-                  "assets/images/food1.webp",
-                ),
-              ),
-
-            ],
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 5,
+            itemBuilder: (context, index) => Container(
+              height: 100,
+              width: 100,
+              margin: EdgeInsets.all(8.0),
+              child: Image.asset('assets/images/food1.webp', fit: BoxFit.contain),
+            ),
           ),
+          // child: ListView(
+          //   scrollDirection: Axis.vertical,
+          //   children: [
+          //     Text('Food 1'),
+          //     Container(
+          //       height: 100,
+          //       width: 100,
+          //       child: Image.asset("assets/images/food1.webp"),
+          //     ),
+          //   ],
+          // ),
         ),
       ),
     );
