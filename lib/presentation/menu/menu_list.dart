@@ -29,7 +29,7 @@ class _MenuListState extends State<MenuList> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
             ),
-            itemBuilder: (context, index) => (
+            itemBuilder: (context, index) => Container(
              
               child: Image.asset(gambarMenu[index], fit: BoxFit.cover),
             ),
