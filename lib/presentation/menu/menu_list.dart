@@ -31,7 +31,8 @@ class _MenuListState extends State<MenuList> {
               height: 100,
               width: 100,
               margin: EdgeInsets.all(8.0),
-              child: Image.asset(gambarMenu[index]),
+
+              child: Image.asset(gambarMenu[index], ),
             ),
           ),
           // child: ListView(
