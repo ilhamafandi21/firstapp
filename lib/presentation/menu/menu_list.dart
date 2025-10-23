@@ -16,9 +16,12 @@ class _MenuListState extends State<MenuList> {
       body: SafeArea(
         child: Container(
           child: ListView.builder(
+            shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemCount: 5,
             itemBuilder: (context, index) => Container(
+              
+              alignment: Alignment.topRight,
               height: 100,
               width: 100,
               margin: EdgeInsets.all(8.0),
