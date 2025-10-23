@@ -24,15 +24,15 @@ class _MenuListState extends State<MenuList> {
         child: Container(
           child: ListView.builder(
             shrinkWrap: true,
-            scrollDirection: Axis.horizontal,
+            scrollDirection: Axis.vertical,
             itemCount: gambarMenu.length,
             itemBuilder: (context, index) => Container(
-              alignment: Alignment.topRight,
+              // alignment: Alignment.topRight,
               height: 100,
               width: 100,
               margin: EdgeInsets.all(8.0),
 
-              child: Image.asset(gambarMenu[index], ),
+              child: Image.asset(gambarMenu[index], fit: BoxFit.cover, ),
             ),
           ),
           // child: ListView(
