@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 193, 255, 7),
+        // backgroundColor: Color.fromARGB(255, 193, 255, 7),
         title: const Text(
           "Fasting App",
           style: TextStyle(
@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
         children: [
           Container(
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
                 String title = 'Dashboard';
                 String buttonText = 'Back to Home';
@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
 
           Container(
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
                 Navigator.of(
                   context,
@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
 
           Container(
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
                 Navigator.of(
                   context,
