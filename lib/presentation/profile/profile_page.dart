@@ -60,29 +60,25 @@ class _ProfileState extends State<Profile> {
                               flex: 3,
                               child: Container(
                                 // color: Colors.amber,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                child: Flex(
+                                  direction: Axis.vertical,
                                   children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Category',
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.grey[600],
-                                          ),
+                                    Text(
+                                      'Category',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Flexible(
+                                      child: Text(
+                                        'Title of the Article dddd sssddd ddd',
+                                       
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
                                         ),
-                                        Text(
-                                          'Title of the Article dddd sssddd ddd',
-                                          overflow: TextOverflow.clip,
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
