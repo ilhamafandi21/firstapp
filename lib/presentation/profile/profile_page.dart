@@ -43,13 +43,17 @@ class _ProfileState extends State<Profile> {
                             Expanded(
                               flex: 7,
                               child: Container(
-                                color: Colors.blue,
-                                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                                child: Image.network(
-                                  'https://picsum.photos/200/300.jpg',
-            
-                                  fit: BoxFit.cover,
-                        
+                                margin: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: NetworkImage(
+                                      'https://picsum.photos/200/300.jpg',
+                                      
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -60,9 +64,10 @@ class _ProfileState extends State<Profile> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                  Text('Category'),
-                                  Text('Title of the Article'),
-                                ],),
+                                    Text('Category'),
+                                    Text('Title of the Article'),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
