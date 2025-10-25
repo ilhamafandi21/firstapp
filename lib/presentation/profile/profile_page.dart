@@ -29,29 +29,28 @@ class _ProfileState extends State<Profile> {
               children: [
                 TitleAndSubtitle(),
                 Container(
+                  padding: EdgeInsets.all(5),
                   height: 200,
-                  color: Colors.red,
+                  // color: Colors.red,
                   child: ListView.builder(
                     itemCount: 10,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        // color: Colors.green,
-                        width: 150,
+                        margin: EdgeInsets.only(right: 10),
+                        width: 190,
                         child: Column(
                           children: [
                             Expanded(
                               flex: 7,
                               child: Container(
-                                margin: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                   color: Colors.blue,
                                   borderRadius: BorderRadius.circular(20),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
                                     image: NetworkImage(
-                                      'https://picsum.photos/200/300.jpg',
-                                      
+                                      'https://picsum.photos/id/237/200/300',
                                     ),
                                   ),
                                 ),
@@ -60,12 +59,31 @@ class _ProfileState extends State<Profile> {
                             Expanded(
                               flex: 3,
                               child: Container(
-                                color: Colors.amber,
-                                child: Column(
+                                // color: Colors.amber,
+                                child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Category'),
-                                    Text('Title of the Article'),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Category',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          'Title of the Article dddd sssddd ddd',
+                                          overflow: TextOverflow.clip,
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               ),
