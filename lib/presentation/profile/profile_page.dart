@@ -59,7 +59,8 @@ class _ProfileState extends State<Profile> {
                             Expanded(
                               flex: 3,
                               child: Container(
-                                // color: Colors.amber,
+                                // padding: EdgeInsets.only(top: 10),
+                                // color: Colors.yellow,
                                 child: Flex(
                                   direction: Axis.vertical,
                                   children: [
