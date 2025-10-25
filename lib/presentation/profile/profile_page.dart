@@ -2,7 +2,6 @@ import 'package:firstapp/presentation/profile/widgets/profile_card_widget.dart';
 import 'package:firstapp/widgets/discover_list_widget.dart';
 import 'package:firstapp/widgets/title_and_subtitle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
