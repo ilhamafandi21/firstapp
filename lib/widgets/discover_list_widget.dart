@@ -47,7 +47,7 @@ class DiscoverListWidget extends StatelessWidget {
                   ),
                   Flexible(
                     child: Text(
-                      'Title of the Article dddd sssddd ddd',
+                      'Title of the Article dddd ',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
