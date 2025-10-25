@@ -39,7 +39,7 @@ class DiscoverListWidget extends StatelessWidget {
                 spacing: 2,
                 children: [
                   Text(
-                    'Category',
+                    'Nature',
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.grey[600], fontWeight: FontWeight.w700,

@@ -42,7 +42,7 @@ class _ProfileState extends State<Profile> {
                     },
                   ),
                 ),
-
+                SizedBox(height: 30),
                 TitleAndSubtitle(),
                 Container(
                   margin: EdgeInsets.only(top: 20),
@@ -64,4 +64,3 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
-
