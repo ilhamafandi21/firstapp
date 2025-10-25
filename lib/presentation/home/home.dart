@@ -30,48 +30,42 @@ class Home extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            child: ElevatedButton(
-              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-              onPressed: () {
-                String title = 'Dashboard';
-                String buttonText = 'Back to Home';
-                // context.router.push(
-                //   Dashboard(title: title, buttonText: buttonText),
-                // );
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        Dashboard(title: title, buttonText: buttonText),
-                  ),
-                );
-              },
-              child: Text('Go to Dashboard'),
-            ),
+          ElevatedButton(
+            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+            onPressed: () {
+              String title = 'Dashboard';
+              String buttonText = 'Back to Home';
+              // context.router.push(
+              //   Dashboard(title: title, buttonText: buttonText),
+              // );
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Dashboard(title: title, buttonText: buttonText),
+                ),
+              );
+            },
+            child: Text('Go to Dashboard'),
           ),
 
-          Container(
-            child: ElevatedButton(
-              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-              onPressed: () {
-                Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (context) => MenuList()));
-              },
-              child: Text('Go to Menu List'),
-            ),
+          ElevatedButton(
+            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => MenuList()));
+            },
+            child: Text('Go to Menu List'),
           ),
 
-          Container(
-            child: ElevatedButton(
-              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-              onPressed: () {
-                Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (context) => Profile()));
-              },
-              child: Text('Go to Profile Page'),
-            ),
+          ElevatedButton(
+            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => Profile()));
+            },
+            child: Text('Go to Profile Page'),
           ),
 
           Container(

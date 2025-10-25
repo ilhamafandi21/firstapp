@@ -22,51 +22,28 @@ class _MenuListState extends State<MenuList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Menu List'),
+      ),
       body: SafeArea(
-        child: Container(
-          child: GridView.builder(
-            itemCount: gambarMenu.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              childAspectRatio: 1 / 1,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              mainAxisExtent: 100,
-            ),
-            itemBuilder: (context, index) => InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ItemDetailPage(gambar: gambarMenu[index],)),
-                );
-              },
-              child: ListImage(gambarMenu: gambarMenu[index]),
-            ),
+        child: GridView.builder(
+          padding: EdgeInsets.all(10),
+          itemCount: gambarMenu.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 4,
+            childAspectRatio: 1 / 1,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            mainAxisExtent: 100,
           ),
-
-          // child: ListView.builder(
-          //   scrollDirection: Axis.vertical,
-          //   itemCount: gambarMenu.length,
-          //   itemBuilder: (context, index) => Container(
-          //     // alignment: Alignment.topRight,
-          //     height: 100,
-          //     width: 100,
-          //     margin: EdgeInsets.all(8.0),
-
-          //     child: Image.asset(gambarMenu[index], fit: BoxFit.cover, ),
-          //   ),
-          // ),
-
-          // child: ListView(
-          //   scrollDirection: Axis.vertical,
-          //   children: [
-          //     Text('Food 1'),
-          //     Container(
-          //       height: 100,
-          //       width: 100,
-          //       child: Image.asset("assets/images/food1.webp"),
-          //     ),
-          //   ],
-          // ),
+          itemBuilder: (context, index) => InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ItemDetailPage(gambar: gambarMenu[index],)),
+              );
+            },
+            child: ListImage(gambarMenu: gambarMenu[index]),
+          ),
         ),
       ),
     );

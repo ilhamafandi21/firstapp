@@ -8,6 +8,9 @@ class ItemDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Item Detail'),
+      ),
       body: SafeArea(
         child: Container(
           height: 300,
