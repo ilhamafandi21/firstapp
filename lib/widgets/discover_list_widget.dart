@@ -30,7 +30,7 @@ class DiscoverListWidget extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: SizeBox(
+            child: SizedBox(
               // padding: EdgeInsets.only(top: 10),
               // color: Colors.yellow,
               child: Flex(
