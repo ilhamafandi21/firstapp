@@ -40,6 +40,7 @@ class _ProfileState extends State<Profile> {
                         margin: EdgeInsets.only(right: 10),
                         width: 190,
                         child: Column(
+                          spacing: 10,
                           children: [
                             Expanded(
                               flex: 7,
@@ -63,6 +64,8 @@ class _ProfileState extends State<Profile> {
                                 // color: Colors.yellow,
                                 child: Flex(
                                   direction: Axis.vertical,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  spacing: 2,
                                   children: [
                                     Text(
                                       'Category',
@@ -74,7 +77,6 @@ class _ProfileState extends State<Profile> {
                                     Flexible(
                                       child: Text(
                                         'Title of the Article dddd sssddd ddd',
-                                       
                                         style: TextStyle(
                                           fontSize: 12,
                                           fontWeight: FontWeight.bold,
