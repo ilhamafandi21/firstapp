@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
       appBar: AppBar(title: Text('Profile Page')),
       body: SafeArea(
         child: Center(
-          child: Container(
+          child: SizedBox(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
