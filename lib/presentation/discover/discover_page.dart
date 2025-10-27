@@ -23,6 +23,14 @@ class _DiscoverPageState extends State<DiscoverPage> {
       appBar: AppBar(title: Text('Discover Page')),
       body: SafeArea(
         child: Center(
+          child: discoveryPop(),
+        ),
+      ),
+    );
+  }
+
+  Widget discoveryPop() {
+    return Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,8 +52,6 @@ class _DiscoverPageState extends State<DiscoverPage> {
               ),
             ],
           ),
-        ),
-      ),
-    );
+        );
   }
 }
