@@ -23,29 +23,18 @@ class _DiscoverPageState extends State<DiscoverPage> {
       appBar: AppBar(title: Text('Discover Page')),
       body: SafeArea(
         child: Center(
-          child: SizedBox(
+          child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TitleAndSubtitle(),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  height: 200,
-                  // color: Colors.red,
-                  child: ListView.builder(
-                    itemCount: 10,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return DiscoverListWidget();
-                    },
-                  ),
+                TitleAndSubtitle(
+                  title: 'Notable Work',
+                  subtitle: 'Based on the popularity of articles',
                 ),
-                SizedBox(height: 30),
-                TitleAndSubtitle(),
                 Container(
                   margin: EdgeInsets.only(top: 20),
                   height: 200,
-                  // color: Colors.red,
+                  color: Colors.red,
                   child: ListView.builder(
                     itemCount: 10,
                     scrollDirection: Axis.horizontal,

@@ -11,6 +11,7 @@ class DiscoverListWidget extends StatelessWidget {
       margin: EdgeInsets.only(right: 10),
       width: 200,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         spacing: 10,
         children: [
           Expanded(
@@ -30,9 +31,7 @@ class DiscoverListWidget extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: SizedBox(
-              // padding: EdgeInsets.only(top: 10),
-              // color: Colors.yellow,
+            child: Container(
               child: Flex(
                 direction: Axis.vertical,
                 crossAxisAlignment: CrossAxisAlignment.start,

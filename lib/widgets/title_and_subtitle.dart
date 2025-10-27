@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TitleAndSubtitle extends StatelessWidget {
-  const TitleAndSubtitle({super.key});
+  const TitleAndSubtitle({
+    super.key,
+    @required this.title,
+    @required this.subtitle,
+  });
+
+  final String? title;
+  final String? subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -9,12 +16,12 @@ class TitleAndSubtitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Notable Work',
+          title ?? 'null',
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 5),
         Text(
-          'Based on the popularity of articles',
+          subtitle ?? 'null',
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
