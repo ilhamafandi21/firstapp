@@ -24,16 +24,17 @@ class _DiscoverPageState extends State<DiscoverPage> {
     return Scaffold(
       appBar: AppBar(title: Text('Discover Page')),
       body: SafeArea(
-        child: FeaturedArticlesBannerBottom(),
-
-        // child: Column(
-        //   children: [
-        //     ProfileCardWidget(),
-        //     Container(
-        //       margin: EdgeInsets.only(left: 10),
-        //       child: discoveryPop()),
-        //   ],
-        // ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ProfileCardWidget(),
+              Container(margin: EdgeInsets.only(left: 10), child: discoveryPop()),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                child: FeaturedArticlesBannerBottom()),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -62,4 +63,3 @@ class _DiscoverPageState extends State<DiscoverPage> {
     );
   }
 }
-
