@@ -1,5 +1,6 @@
 // import 'package:auto_route/auto_route.dart';
 import 'package:firstapp/presentation/dashboard/dashboard.dart';
+import 'package:firstapp/presentation/discover/discover_page.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
 import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
@@ -57,6 +58,18 @@ class Home extends StatelessWidget {
             },
             child: Text('Go to Menu List'),
           ),
+
+
+ ElevatedButton(
+            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => DiscoverPage()));
+            },
+            child: Text('Go to Menu Discover Page'),
+          ),
+
 
           ElevatedButton(
             // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),

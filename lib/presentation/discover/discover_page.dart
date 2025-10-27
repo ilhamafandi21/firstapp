@@ -1,0 +1,64 @@
+import 'package:firstapp/widgets/discover_list_widget.dart';
+import 'package:firstapp/widgets/title_and_subtitle.dart';
+import 'package:flutter/material.dart';
+
+class DiscoverPage extends StatefulWidget {
+  const DiscoverPage({super.key});
+
+  @override
+  State<DiscoverPage> createState() => _DiscoverPageState();
+}
+
+class _DiscoverPageState extends State<DiscoverPage> {
+  List<String> gambarMenu = [
+    'assets/images/food1.webp',
+    'assets/images/food2.webp',
+    'assets/images/food3.jpg',
+    'assets/images/food4.jpg',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Discover Page')),
+      body: SafeArea(
+        child: Center(
+          child: SizedBox(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TitleAndSubtitle(),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 200,
+                  // color: Colors.red,
+                  child: ListView.builder(
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return DiscoverListWidget();
+                    },
+                  ),
+                ),
+                SizedBox(height: 30),
+                TitleAndSubtitle(),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  height: 200,
+                  // color: Colors.red,
+                  child: ListView.builder(
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return DiscoverListWidget();
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
