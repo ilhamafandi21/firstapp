@@ -1,3 +1,4 @@
+import 'package:firstapp/presentation/featured_article/featured_article.dart';
 import 'package:firstapp/presentation/profile/widgets/profile_card_widget.dart';
 import 'package:firstapp/widgets/discover_list_widget.dart';
 import 'package:firstapp/widgets/title_and_subtitle.dart';
@@ -23,14 +24,16 @@ class _DiscoverPageState extends State<DiscoverPage> {
     return Scaffold(
       appBar: AppBar(title: Text('Discover Page')),
       body: SafeArea(
-        child: Column(
-          children: [
-            ProfileCardWidget(),
-            Container(
-              margin: EdgeInsets.only(left: 10),
-              child: discoveryPop()),
-          ],
-        ),
+        child: FeaturedArticlesBannerBottom(),
+
+        // child: Column(
+        //   children: [
+        //     ProfileCardWidget(),
+        //     Container(
+        //       margin: EdgeInsets.only(left: 10),
+        //       child: discoveryPop()),
+        //   ],
+        // ),
       ),
     );
   }
@@ -59,3 +62,4 @@ class _DiscoverPageState extends State<DiscoverPage> {
     );
   }
 }
+
