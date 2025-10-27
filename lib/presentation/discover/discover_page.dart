@@ -24,6 +24,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
       appBar: AppBar(title: Text('Discover Page')),
       body: SafeArea(
         child: Column(
+          spacing: 10,
           children: [
             ProfileCardWidget(),
             discoveryPop(),
@@ -34,26 +35,29 @@ class _DiscoverPageState extends State<DiscoverPage> {
   }
 
   Widget discoveryPop() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        TitleAndSubtitle(
-          title: 'Notable Work',
-          subtitle: 'Based on the popularity of articles',
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 20),
-          height: 200,
-          // color: Colors.red,
-          child: ListView.builder(
-            itemCount: 10,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return DiscoverListWidget();
-            },
+    return Container(
+      margin: EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleAndSubtitle(
+            title: 'Notable Work',
+            subtitle: 'Based on the popularity of articles',
           ),
-        ),
-      ],
+          Container(
+            margin: EdgeInsets.only(top: 20),
+            height: 200,
+            // color: Colors.red,
+            child: ListView.builder(
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return DiscoverListWidget();
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
