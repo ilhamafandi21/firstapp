@@ -28,10 +28,15 @@ class _DiscoverPageState extends State<DiscoverPage> {
           child: Column(
             children: [
               ProfileCardWidget(),
-              Container(margin: EdgeInsets.only(left: 10), child: discoveryPop()),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: FeaturedArticlesBannerBottom()),
+                margin: EdgeInsets.only(left: 10),
+                child: discoveryPop(),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: FeaturedArticlesBannerBottom(),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),
