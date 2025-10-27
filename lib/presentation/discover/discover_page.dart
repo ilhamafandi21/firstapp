@@ -33,10 +33,9 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 child: discoveryPop(),
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: FeaturedArticlesBannerBottom(),
               ),
-              SizedBox(height: 20),
             ],
           ),
         ),
