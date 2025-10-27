@@ -6,7 +6,7 @@ class DiscoverListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10),
+      margin: EdgeInsets.only(right: 15),
       width: 200,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
