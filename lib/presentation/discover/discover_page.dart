@@ -36,7 +36,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: FeaturedArticlesBannerBottom(),
               ),
-              SizedBox(height: 20,)
+              SizedBox(height: 10,)
             ],
           ),
         ),
