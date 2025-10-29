@@ -1,9 +1,21 @@
+import 'package:firstapp/infrastructure/auth/auth_repository.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
-  Widget _buildPageContent() {
-    return Container(
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:  Container(
       padding: const EdgeInsets.all(20.0),
       color: Colors.grey.shade800,
       child: ListView(
@@ -19,8 +31,9 @@ class SignInPage extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              const ListTile(
+              ListTile(
                   title: TextField(
+                    controller: _emailController,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     hintText: "Email address:",
@@ -34,8 +47,9 @@ class SignInPage extends StatelessWidget {
               Divider(
                 color: Colors.grey.shade600,
               ),
-              const ListTile(
+              ListTile(
                   title: TextField(
+                    controller: _passwordController,
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                     hintText: "Password:",
@@ -59,7 +73,19 @@ class SignInPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.cyan,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        // Panggil Cubit
+
+
+
+
+
+
+
+
+
+
+                      },
                       child: const Text(
                         'Login',
                         style: TextStyle(color: Colors.white70, fontSize: 16.0),
@@ -79,13 +105,7 @@ class SignInPage extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildPageContent(),
+    ),
     );
   }
 }
