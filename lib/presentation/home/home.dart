@@ -16,8 +16,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ExampleProvider>(
-      
-      builder:(context, exampleProvider, _) => Scaffold(
+      builder: (context, exampleProvider, _) => Scaffold(
         appBar: AppBar(
           // backgroundColor: Color.fromARGB(255, 193, 255, 7),
           title: const Text(
@@ -36,6 +35,22 @@ class Home extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Column(
+              children: [
+                Text(exampleProvider.getDataString ?? 'null'),
+                ElevatedButton(
+                  // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+                  onPressed: () {
+                    exampleProvider.setDataString('0');
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ProviderPage()),
+                    );
+                  },
+                  child: Text('Provider Page'),
+                ),
+              ],
+            ),
+
             ElevatedButton(
               // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
@@ -53,7 +68,7 @@ class Home extends StatelessWidget {
               },
               child: Text('Go to Dashboard'),
             ),
-      
+
             ElevatedButton(
               // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
@@ -63,23 +78,7 @@ class Home extends StatelessWidget {
               },
               child: Text('Go to Menu List'),
             ),
-      
-      
-            Column(
-              children: [
-                Text(print(exampleProvider.getDataString ?? 'null')),
-                ElevatedButton(
-                  // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-                  onPressed: () {
-                    Navigator.of(
-                      context,
-                    ).push(MaterialPageRoute(builder: (context) => ProviderPage()));
-                  },
-                  child: Text('Provider Page')
-                ),
-              ],
-            ),
-      
+
             ElevatedButton(
               // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
@@ -89,7 +88,7 @@ class Home extends StatelessWidget {
               },
               child: Text('Go to Menu Discover Page'),
             ),
-      
+
             ElevatedButton(
               // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
               onPressed: () {
@@ -99,7 +98,7 @@ class Home extends StatelessWidget {
               },
               child: Text('Go to Profile Page'),
             ),
-      
+
             Container(
               alignment: AlignmentGeometry.center,
               color: Colors.grey[200],
