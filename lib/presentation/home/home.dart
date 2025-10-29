@@ -16,7 +16,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ExampleProvider>(
-      builder:( context, provid, _) => Scaffold(
+      
+      builder:(context, exampleProvider, _) => Scaffold(
         appBar: AppBar(
           // backgroundColor: Color.fromARGB(255, 193, 255, 7),
           title: const Text(
@@ -66,7 +67,7 @@ class Home extends StatelessWidget {
       
             Column(
               children: [
-                Text(provid.getDataString.toString()),
+                Text(print(exampleProvider.getDataString ?? 'null')),
                 ElevatedButton(
                   // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
                   onPressed: () {
