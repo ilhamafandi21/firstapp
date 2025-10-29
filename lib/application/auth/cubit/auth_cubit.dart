@@ -7,9 +7,19 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
-  AuthRepository _authRepository =  AuthRepository();
+  AuthRepository _authRepository = AuthRepository();
 
-  void signUser(String username, String password){
-    
+  void signUser(String username, String password) async {
+    emit(AuthLoading());
+
+    try {
+      String _data = await _authRepository.signInUserWithPass(
+        username: username,
+        password: password,
+      );
+      emit(AuthSignSuccess(_data));
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
   }
 }
