@@ -15,119 +15,121 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // backgroundColor: Color.fromARGB(255, 193, 255, 7),
-        title: const Text(
-          "Fasting App",
-          style: TextStyle(
-            color: Colors.brown,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
+    return Consumer<ExampleProvider>(
+      builder:( context, provid, _) => Scaffold(
+        appBar: AppBar(
+          // backgroundColor: Color.fromARGB(255, 193, 255, 7),
+          title: const Text(
+            "Fasting App",
+            style: TextStyle(
+              color: Colors.brown,
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          actions: [
+            Icon(Icons.account_circle, color: Colors.brown),
+            Icon(Icons.settings),
+          ],
         ),
-        actions: [
-          Icon(Icons.account_circle, color: Colors.brown),
-          Icon(Icons.settings),
-        ],
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          ElevatedButton(
-            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-            onPressed: () {
-              String title = 'Dashboard';
-              String buttonText = 'Back to Home';
-              // context.router.push(
-              //   Dashboard(title: title, buttonText: buttonText),
-              // );
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) =>
-                      Dashboard(title: title, buttonText: buttonText),
-                ),
-              );
-            },
-            child: Text('Go to Dashboard'),
-          ),
-
-          ElevatedButton(
-            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-            onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (context) => MenuList()));
-            },
-            child: Text('Go to Menu List'),
-          ),
-
-
-          Column(
-            children: [
-              Text('Data'),
-              ElevatedButton(
-                // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-                onPressed: () {
-                  Navigator.of(
-                    context,
-                  ).push(MaterialPageRoute(builder: (context) => ProviderPage()));
-                },
-                child: Consumer<ExampleProvider>(builder: (context, exampleProvider, _) => Text(exampleProvider.getDataString.toString())),
-              ),
-            ],
-          ),
-
-          ElevatedButton(
-            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-            onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (context) => DiscoverPage()));
-            },
-            child: Text('Go to Menu Discover Page'),
-          ),
-
-          ElevatedButton(
-            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-            onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (context) => Profile()));
-            },
-            child: Text('Go to Profile Page'),
-          ),
-
-          Container(
-            alignment: AlignmentGeometry.center,
-            color: Colors.grey[200],
-            width: double.infinity,
-            height: 80.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ElevatedButton(
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                String title = 'Dashboard';
+                String buttonText = 'Back to Home';
+                // context.router.push(
+                //   Dashboard(title: title, buttonText: buttonText),
+                // );
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        Dashboard(title: title, buttonText: buttonText),
+                  ),
+                );
+              },
+              child: Text('Go to Dashboard'),
+            ),
+      
+            ElevatedButton(
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => MenuList()));
+              },
+              child: Text('Go to Menu List'),
+            ),
+      
+      
+            Column(
               children: [
-                IconWithLabel(
-                  icon: Icons.call,
-                  text: 'Call',
-                  textColor: Colors.blue,
-                  iconColor: Colors.green,
-                ),
-                IconWithLabel(
-                  icon: Icons.navigation,
-                  text: 'Route',
-                  textColor: Colors.blue,
-                  iconColor: Colors.green,
-                ),
-                IconWithLabel(
-                  icon: Icons.share,
-                  text: 'Share',
-                  textColor: Colors.blue,
-                  iconColor: Colors.green,
+                Text(provid.getDataString.toString()),
+                ElevatedButton(
+                  // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+                  onPressed: () {
+                    Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute(builder: (context) => ProviderPage()));
+                  },
+                  child: Text('Provider Page')
                 ),
               ],
             ),
-          ),
-        ],
+      
+            ElevatedButton(
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => DiscoverPage()));
+              },
+              child: Text('Go to Menu Discover Page'),
+            ),
+      
+            ElevatedButton(
+              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => Profile()));
+              },
+              child: Text('Go to Profile Page'),
+            ),
+      
+            Container(
+              alignment: AlignmentGeometry.center,
+              color: Colors.grey[200],
+              width: double.infinity,
+              height: 80.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconWithLabel(
+                    icon: Icons.call,
+                    text: 'Call',
+                    textColor: Colors.blue,
+                    iconColor: Colors.green,
+                  ),
+                  IconWithLabel(
+                    icon: Icons.navigation,
+                    text: 'Route',
+                    textColor: Colors.blue,
+                    iconColor: Colors.green,
+                  ),
+                  IconWithLabel(
+                    icon: Icons.share,
+                    text: 'Share',
+                    textColor: Colors.blue,
+                    iconColor: Colors.green,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
