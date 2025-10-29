@@ -1,4 +1,5 @@
 // import 'package:auto_route/auto_route.dart';
+import 'package:firstapp/application/example_provider.dart';
 import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/presentation/discover/discover_page.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
@@ -6,6 +7,7 @@ import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:firstapp/presentation/providers/provider_page.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 // @RoutePage()
 class Home extends StatelessWidget {
@@ -60,14 +62,20 @@ class Home extends StatelessWidget {
             child: Text('Go to Menu List'),
           ),
 
-          ElevatedButton(
-            // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-            onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (context) => ProviderPage()));
-            },
-            child: Text('Provider Page'),
+
+          Column(
+            children: [
+              Text('Data'),
+              ElevatedButton(
+                // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+                onPressed: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => ProviderPage()));
+                },
+                child: Consumer<ExampleProvider>(builder: (context, exampleProvider, _) => Text(exampleProvider.getDataString.toString())),
+              ),
+            ],
           ),
 
           ElevatedButton(
