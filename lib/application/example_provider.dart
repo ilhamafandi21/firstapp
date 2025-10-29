@@ -6,7 +6,7 @@ class ExampleProvider extends ChangeNotifier {
 
 // CARA SET DATA
   void setDataString(String data){
-    this._data = data;
+    _data = data;
     notifyListeners();
   }
 
