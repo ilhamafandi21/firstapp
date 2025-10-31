@@ -1,8 +1,6 @@
-// import 'package:auto_route/auto_route.dart';
-// import 'package:dartz/dartz.dart';
 import 'package:firstapp/application/auth/cubit/auth_cubit.dart';
+import 'package:firstapp/domain/auth/model/login_request.dart';
 import 'package:firstapp/presentation/profile/profile_page.dart';
-// import 'package:firstapp/infrastructure/auth/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,11 +29,9 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthSignSuccess) {
               print(state.dataLogin);
 
-
-Navigator.of(context).push(MaterialPageRoute(builder: (context) => Profile() ) );
-
-
-
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => Profile()));
             }
           },
           builder: (context, state) {
@@ -105,11 +101,15 @@ Navigator.of(context).push(MaterialPageRoute(builder: (context) => Profile() ) )
     return ElevatedButton(
       style: ElevatedButton.styleFrom(backgroundColor: Colors.cyan),
       onPressed: () {
-        // Panggil Cubit
-        context.read<AuthCubit>().signUser(
-          _usernameController.text,
-          _passwordController.text,
+        final requestData = LoginRequest(
+          username: _usernameController.text,
+          password: _passwordController.text,
         );
+
+        //  _usernameController.text,
+        //   _passwordController.text,
+        // Panggil Cubit
+        context.read<AuthCubit>().signUser(requestData);
       },
       child: const Text(
         'Login',
