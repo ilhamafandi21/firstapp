@@ -23,7 +23,14 @@ class _SignInPageState extends State<SignInPage> {
         child: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
             if (state is AuthError) {
-              print(state.errorMessage);
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Error'),
+                  content: Text(state.errorMessage),
+                  actions: [CloseButton()],
+                ),
+              );
             } else if (state is AuthLoading) {
               print('loading ...');
             } else if (state is AuthSignSuccess) {
