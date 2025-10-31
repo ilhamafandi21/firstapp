@@ -1,6 +1,7 @@
 // import 'package:auto_route/auto_route.dart';
 // import 'package:dartz/dartz.dart';
 import 'package:firstapp/application/auth/cubit/auth_cubit.dart';
+import 'package:firstapp/presentation/profile/profile_page.dart';
 // import 'package:firstapp/infrastructure/auth/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +14,7 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  final _emailController = TextEditingController();
+  final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
   @override
@@ -29,6 +30,12 @@ class _SignInPageState extends State<SignInPage> {
               print('loading ...');
             } else if (state is AuthSignSuccess) {
               print(state.dataLogin);
+
+
+Navigator.of(context).push(MaterialPageRoute(builder: (context) => Profile() ) );
+
+
+
             }
           },
           builder: (context, state) {
@@ -44,7 +51,7 @@ class _SignInPageState extends State<SignInPage> {
                       const SizedBox(height: 50),
                       ListTile(
                         title: TextField(
-                          controller: _emailController,
+                          controller: _usernameController,
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             hintText: "Email address:",
@@ -100,7 +107,7 @@ class _SignInPageState extends State<SignInPage> {
       onPressed: () {
         // Panggil Cubit
         context.read<AuthCubit>().signUser(
-          _emailController.text,
+          _usernameController.text,
           _passwordController.text,
         );
       },
