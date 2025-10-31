@@ -1,6 +1,5 @@
 // import 'package:auto_route/auto_route.dart';
 import 'package:firstapp/application/example_provider.dart';
-import 'package:firstapp/domain/auth/model/login_response.dart';
 import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/presentation/discover/discover_page.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
@@ -12,9 +11,7 @@ import 'package:provider/provider.dart';
 
 // @RoutePage()
 class Home extends StatelessWidget {
-  const Home({super.key, this.loginResponse});
-
-  final LoginResponse? loginResponse;
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
