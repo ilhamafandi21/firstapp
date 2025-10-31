@@ -1,8 +1,30 @@
+import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:firstapp/domain/auth/model/login_request.dart';
+import 'package:firstapp/domain/auth/model/login_response.dart';
 
-final dio = Dio();
+class AuthRepository {
+  final _dio = Dio();
 
-void getHttp() async {
-  final response = await dio.get('https://dummyjson.com/users');
-  print(response);
+  Future<Either<String, LoginResponse>> signInUserWithPass({
+    required LoginRequest? loginRequest,
+  }) async {
+    try {
+      final response = await _dio.post(
+        'https://dummyjson.com/user/login',
+        data: loginRequest.toJson(),
+        options: Options(headers: {'Content-Type': 'application/json'}),
+      );
+      final loginResp = LoginResponse.fromJson(response.data);
+      return right(loginResp);
+    } on DioException catch (e) {
+      switch (e.type) {
+        case DioExceptionType.connectionTimeout:
+          return left(e.message ?? e.error.toString());
+        default:
+      }
+    } catch (e) {
+      return left(e.toString());
+    }
+  }
 }
