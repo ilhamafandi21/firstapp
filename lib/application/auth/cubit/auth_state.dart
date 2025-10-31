@@ -10,6 +10,6 @@ final class AuthError extends AuthState {
   AuthError(this.errorMessage);
 }
 final class AuthSignSuccess extends AuthState {
-  final String dataLogin;
+  final LoginResponse dataLogin;
   AuthSignSuccess(this.dataLogin);
 }
