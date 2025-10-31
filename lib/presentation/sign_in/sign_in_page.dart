@@ -38,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
 
               Navigator.of(
                 context,
-              ).push(MaterialPageRoute(builder: (context) => Profile()));
+              ).push(MaterialPageRoute(builder: (context) => Profile(loginResponse: state.dataLogin,)));
             }
           },
           builder: (context, state) {

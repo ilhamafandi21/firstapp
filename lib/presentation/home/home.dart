@@ -89,15 +89,15 @@ class Home extends StatelessWidget {
               child: Text('Go to Menu Discover Page'),
             ),
 
-            ElevatedButton(
-              // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
-              onPressed: () {
-                Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (context) => Profile()));
-              },
-              child: Text('Go to Profile Page'),
-            ),
+            // ElevatedButton(
+            //   // style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+            //   onPressed: () {
+            //     Navigator.of(
+            //       context,
+            //     ).push(MaterialPageRoute(builder: (context) => Profile(loginResponse: ,)));
+            //   },
+            //   child: Text('Go to Profile Page'),
+            // ),
 
             Container(
               alignment: AlignmentGeometry.center,
