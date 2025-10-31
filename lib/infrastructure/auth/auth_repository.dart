@@ -7,7 +7,7 @@ class AuthRepository {
   final _dio = Dio();
 
   Future<Either<String, LoginResponse>> signInUserWithPass({
-    required LoginRequest? loginRequest,
+    required LoginRequest loginRequest,
   }) async {
     try {
       final response = await _dio.post(
@@ -22,6 +22,7 @@ class AuthRepository {
         case DioExceptionType.connectionTimeout:
           return left(e.message ?? e.error.toString());
         default:
+          return left(e.message ?? e.error.toString());
       }
     } catch (e) {
       return left(e.toString());
