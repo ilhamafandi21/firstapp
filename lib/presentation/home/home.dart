@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           // backgroundColor: Color.fromARGB(255, 193, 255, 7),
           title: const Text(
-            "Fasting App",
+            "Fasting ",
             style: TextStyle(
               color: Colors.brown,
               fontSize: 14,
