@@ -3,9 +3,8 @@ import 'package:firstapp/presentation/home/home.dart';
 import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:firstapp/presentation/sign_in/sign_in_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:firstapp/utils/constants.dart' as constants;
+import 'package:firstapp/utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

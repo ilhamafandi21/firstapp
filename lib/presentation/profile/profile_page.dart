@@ -34,6 +34,7 @@ lr.LoginResponse ? _loginResponse;
       appBar: AppBar(title: Text(
         _loginResponse?.accessToken ?? 'null'
       )),
+      
       body: SafeArea(
         child: Center(
           child: SizedBox(
