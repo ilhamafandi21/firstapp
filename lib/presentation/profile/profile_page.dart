@@ -1,23 +1,33 @@
+ 
 import 'package:firstapp/domain/auth/model/login_response.dart';
 import 'package:firstapp/presentation/profile/widgets/profile_card_widget.dart';
+import 'package:firstapp/utils/constants.dart' as constants;
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({super.key, required this.loginResponse});
-
-  final LoginResponse loginResponse;
-
+  const Profile({super.key});
   @override
   State<Profile> createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
+LoginResponse ? _loginResponse;
+
+@override
+  void initState() {
+    // TODO: implement initState
+
+    _loginResponse = GetStorage().read(constants.USER_LOCAL_KEY);
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(
-        widget.loginResponse.firstName ?? 'null'
+        _loginResponse?.accessToken ?? 'null'
       )),
       body: SafeArea(
         child: Center(

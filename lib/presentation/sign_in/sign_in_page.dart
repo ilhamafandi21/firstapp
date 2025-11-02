@@ -6,7 +6,6 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_storage/get_storage.dart';
 
-
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 
@@ -39,9 +38,10 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthSignSuccess) {
               AuthCubit().saveUserToLocal(state.dataLogin);
               print(state.dataLogin);
+            } else if (state is AuthSuccess) {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Profile(loginResponse: state.dataLogin),
+                  builder: (context) => Profile(),
                 ),
               );
             }
