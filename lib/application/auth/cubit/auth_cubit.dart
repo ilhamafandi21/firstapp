@@ -40,4 +40,17 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthError(e.toString()));
     }
   }
+
+  void loadUserFromLocal() async {
+    emit(AuthLoading());
+    try {
+      final _data = await GetStorage().read(
+        constants.USER_LOCAL_KEY,
+      );
+      final _result = LoginResponse.fromJson(jsonDecode(_data));
+      emit(AuthSignSuccess(_result));
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }
 }

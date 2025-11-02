@@ -14,10 +14,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(),
+      create: (context) => AuthCubit()..loadUserFromLocal(),
       child: BlocListener<AuthCubit, AuthState>(
         listener: (context, state) {
           // TODO: implement listener
+
+          if(state is AuthSignSuccess){
+            Navigator.of(context).
+          }
         },
         child: Scaffold(body: Center(child: CircularProgressIndicator())),
       ),
