@@ -4,6 +4,7 @@ import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 
@@ -34,6 +35,7 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthLoading) {
               print('loading ...');
             } else if (state is AuthSignSuccess) {
+              context.bloc<AuthCubit>().saveUserToLocal(data);
               print(state.dataLogin);
 
               Navigator.of(context).push(
