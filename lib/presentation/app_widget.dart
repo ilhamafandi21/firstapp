@@ -1,5 +1,6 @@
 import 'package:firstapp/application/example_provider.dart';
 import 'package:firstapp/presentation/home/home.dart';
+import 'package:firstapp/presentation/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           // useSystemColors: true,
         ),
         // routerConfig: _appRouter.config(),
-        home: Home(),
+        home: SplashScreen(),
       ),
     );
   }
