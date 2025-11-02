@@ -32,13 +32,12 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthLoading());
     try {
       await GetStorage().write(
-      constants.USER_LOCAL_KEY, jsonEncode(data.toJson())
-      ,
-    );
-    emit(AuthSuccess());
+        constants.USER_LOCAL_KEY,
+        jsonEncode(data.toJson()),
+      );
+      emit(AuthSuccess());
     } catch (e) {
       emit(AuthError(e.toString()));
     }
-    
   }
 }
