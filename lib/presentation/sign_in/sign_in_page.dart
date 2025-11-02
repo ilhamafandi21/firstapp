@@ -2,7 +2,9 @@ import 'package:firstapp/application/auth/cubit/auth_cubit.dart';
 import 'package:firstapp/domain/auth/model/login_request.dart';
 import 'package:firstapp/presentation/profile/profile_page.dart';
 import 'package:flutter/material.dart';
+import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_storage/get_storage.dart';
 
 
 class SignInPage extends StatefulWidget {
@@ -35,9 +37,8 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthLoading) {
               print('loading ...');
             } else if (state is AuthSignSuccess) {
-              context.bloc<AuthCubit>().saveUserToLocal(data);
+              AuthCubit().saveUserToLocal(state.dataLogin);
               print(state.dataLogin);
-
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => Profile(loginResponse: state.dataLogin),
