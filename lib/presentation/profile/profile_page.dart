@@ -1,4 +1,7 @@
  
+import 'dart:convert';
+
+import 'package:firstapp/domain/auth/model/login_response.dart' as lr;
 import 'package:firstapp/domain/auth/model/login_response.dart';
 import 'package:firstapp/presentation/profile/widgets/profile_card_widget.dart';
 import 'package:firstapp/utils/constants.dart' as constants;
@@ -12,13 +15,15 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-LoginResponse ? _loginResponse;
+lr.LoginResponse ? _loginResponse;
 
 @override
   void initState() {
     // TODO: implement initState
 
-    _loginResponse = GetStorage().read(constants.USER_LOCAL_KEY);
+    final _data = GetStorage().read(constants.USER_LOCAL_KEY);
+    
+    _loginResponse = LoginResponse.fromJson(jsonDecode(_data));
     super.initState();
   }
 

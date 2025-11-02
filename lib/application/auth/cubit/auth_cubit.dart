@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firstapp/domain/auth/model/login_request.dart';
 import 'package:firstapp/domain/auth/model/login_response.dart';
 import 'package:firstapp/infrastructure/auth/auth_repository.dart';
@@ -30,8 +32,8 @@ class AuthCubit extends Cubit<AuthState> {
     emit(AuthLoading());
     try {
       await GetStorage().write(
-      constants.USER_LOCAL_KEY,
-      data.toJson(),
+      constants.USER_LOCAL_KEY, jsonEncode(data.toJson())
+      ,
     );
     emit(AuthSuccess());
     } catch (e) {
