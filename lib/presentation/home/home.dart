@@ -17,10 +17,7 @@ class Home extends StatelessWidget {
     return Consumer<ExampleProvider>(
       builder: (context, exampleProvider, _) => Scaffold(
         appBar: AppBar(
-          // actions: [
-          //   IconButton(onPressed: (){}, icon: Icon(Icons.logout)),
-            
-          // ],
+      
           // backgroundColor: Color.fromARGB(255, 193, 255, 7),
           title: const Text(
             "Fasting App",
@@ -33,6 +30,7 @@ class Home extends StatelessWidget {
           actions: [
             Icon(Icons.account_circle, color: Colors.brown),
             Icon(Icons.settings),
+            IconButton(onPressed: (){}, icon: Icon(Icons.logout)),
           ],
         ),
         body: Column(
