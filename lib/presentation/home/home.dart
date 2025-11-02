@@ -4,8 +4,10 @@ import 'package:firstapp/presentation/dashboard/dashboard.dart';
 import 'package:firstapp/presentation/discover/discover_page.dart';
 import 'package:firstapp/presentation/menu/menu_list.dart';
 import 'package:firstapp/presentation/providers/provider_page.dart';
+import 'package:firstapp/presentation/sign_in/sign_in_page.dart';
 import 'package:firstapp/widgets/icon_with_label.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 
 // @RoutePage()
@@ -17,7 +19,6 @@ class Home extends StatelessWidget {
     return Consumer<ExampleProvider>(
       builder: (context, exampleProvider, _) => Scaffold(
         appBar: AppBar(
-      
           // backgroundColor: Color.fromARGB(255, 193, 255, 7),
           title: const Text(
             "Fasting App",
@@ -30,7 +31,15 @@ class Home extends StatelessWidget {
           actions: [
             Icon(Icons.account_circle, color: Colors.brown),
             Icon(Icons.settings),
-            IconButton(onPressed: (){}, icon: Icon(Icons.logout)),
+            IconButton(
+              onPressed: () {
+                GetStorage().erase();
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => SignInPage()),
+                );
+              },
+              icon: Icon(Icons.logout),
+            ),
           ],
         ),
         body: Column(
