@@ -3,6 +3,8 @@ import 'package:firstapp/domain/auth/model/login_request.dart';
 import 'package:firstapp/domain/auth/model/login_response.dart';
 import 'package:firstapp/infrastructure/auth/auth_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:firstapp/utils/constants.dart' as constants;
 
 
 part 'auth_state.dart';
@@ -24,5 +26,10 @@ class AuthCubit extends Cubit<AuthState> {
     } catch (e) {
       emit(AuthError(e.toString()));
     }
+  }
+
+  void saveUserToLocal(LoginResponse data) async {
+    emit(AuthLoading());
+    final _data = await GetStorage().write(constants.USER_LOCAL_KEY, data);
   }
 }
