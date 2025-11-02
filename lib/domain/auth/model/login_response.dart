@@ -33,7 +33,7 @@ class LoginResponse {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['accessToken'] = this.accessToken;
     data['refreshToken'] = this.refreshToken;
     data['id'] = this.id;
