@@ -36,7 +36,7 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthLoading) {
               print('loading ...');
             } else if (state is AuthSignSuccess) {
-              AuthCubit().saveUserToLocal(state.dataLogin);
+             context.read<AuthCubit>().saveUserToLocal(state.dataLogin);
               print(state.dataLogin);
             } else if (state is AuthSuccess) {
               Navigator.of(context).push(
