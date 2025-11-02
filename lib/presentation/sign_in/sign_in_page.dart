@@ -36,9 +36,11 @@ class _SignInPageState extends State<SignInPage> {
             } else if (state is AuthSignSuccess) {
               print(state.dataLogin);
 
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (context) => Profile(loginResponse: state.dataLogin,)));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => Profile(loginResponse: state.dataLogin),
+                ),
+              );
             }
           },
           builder: (context, state) {
